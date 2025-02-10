@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-02-10T15:29:37.039742" rpa="false" schemaversion="5">
+<suite id="s1" name="Signup" source="C:\dario\projects\Projeto-Robot-Automation\signup.robot">
+<test id="s1-t1" name="Deve poder cadastrar um novo usuário" line="7">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-02-10T15:29:37.214356" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\dario\\projects\\Projeto-Robot-Automation\\logs\\browser\\traces\\temp\\31ce98d2-b2be-4a3e-97ed-96e83bdd77a1"}</msg>
+<msg time="2025-02-10T15:29:37.244249" level="INFO">Starting Browser process C:\Python313\Lib\site-packages\Browser\wrapper\index.js using port 52257</msg>
+<msg time="2025-02-10T15:29:37.244362" level="INFO">Node startup parameters: ['node', 'C:\\Python313\\Lib\\site-packages\\Browser\\wrapper\\index.js', '52257']</msg>
+<msg time="2025-02-10T15:29:38.648685" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\dario\\projects\\Projeto-Robot-Automation\\logs\\browser\\traces\\temp\\31ce98d2-b2be-4a3e-97ed-96e83bdd77a1"}</msg>
+<arg>browser=chromium</arg>
+<arg>headless=${False}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-02-10T15:29:37.213175" elapsed="1.435692"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-02-10T15:29:41.738309" level="INFO">Successfully initialized new page object and opened url: https://automationexercise.com/signup</msg>
+<msg time="2025-02-10T15:29:41.738399" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>https://automationexercise.com/signup</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-02-10T15:29:38.649304" elapsed="3.089301"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-10T15:29:41.767454" level="INFO">Waited for Element with selector div[class="signup-form"] at state visible</msg>
+<arg>div[class="signup-form"]</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-10T15:29:41.739086" elapsed="0.028730"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-02-10T15:29:41.794290" level="INFO">Text: 'New User Signup!'</msg>
+<arg>div[class="signup-form"] h2</arg>
+<arg>equal</arg>
+<arg>New User Signup!</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-10T15:29:41.768266" elapsed="0.026161"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-10T15:29:46.795363" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-10T15:29:41.794693" elapsed="5.000770"/>
+</kw>
+<msg time="2025-02-10T15:29:46.798808" level="INFO">Set timeout to: 10000</msg>
+<msg time="2025-02-10T15:29:46.812595" level="INFO">Switching context to context=a0d83179-3e77-4ee2-99db-f0695e5074c9 in CURRENT</msg>
+<msg time="2025-02-10T15:29:46.822303" level="INFO">Successfully changed active context: context=a0d83179-3e77-4ee2-99db-f0695e5074c9</msg>
+<msg time="2025-02-10T15:29:46.869340" level="INFO">Successfully closed Context</msg>
+<status status="PASS" start="2025-02-10T15:29:37.212037" elapsed="9.583690"/>
+</test>
+<doc>Cenário de testes do cadastro de usuários</doc>
+<status status="PASS" start="2025-02-10T15:29:37.041560" elapsed="9.829688"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Signup" id="s1" pass="1" fail="0" skip="0">Signup</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
